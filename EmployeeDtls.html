@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Details</title>
+</head>
+<body>
+    <h1 id="heading"></h1>
+    <div id="info"></div>
+    <script>
+        // Print a sentence
+        document.getElementById('heading').innerHTML = "<p>Employees Information</p>";
+
+        // Define an array of employee objects
+        const employees = [
+            { firstName: "Madhu", lastName: "krishna", age: 23 },
+            { firstName: "Rama", lastName: "krishna", age: 19 },
+            { firstName: "Subbarayudu", lastName: "Janapati", age: 24 }
+        ];
+
+        // Use a for loop to iterate over the employees and print their details
+        for (let i = 0; i < employees.length; i++) {
+            document.getElementById('info').innerHTML += `
+                <div class="employee">
+                    <strong>Employee ${i + 1}:</strong><br>
+                    First Name: ${employees[i].firstName}<br>
+                    Last Name: ${employees[i].lastName}<br>
+                    Age: ${employees[i].age}
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>
