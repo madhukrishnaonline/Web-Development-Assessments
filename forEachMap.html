@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forEach Map</title>
+</head>
+<body>
+
+    <h1>Map forEach</h1>
+    <div id="map"></div>
+    <script>
+        const myMap = new Map([
+            ['name', 'Madhu'],
+            ['age', 23],
+            ['city', 'Hyderabad']
+        ]);
+
+        // Use forEach() to iterate over the Map
+        let result = "<h2>Map Entries:</h2>";
+        myMap.forEach((value, key) => {
+            result += `<p>Key: ${key}, Value: ${value}</p>`;
+        });
+
+        // Display results in the HTML
+        document.getElementById('map').innerHTML = result;
+
+    </script>
+</body>
+</html>
