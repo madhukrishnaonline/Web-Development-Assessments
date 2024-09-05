@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Iteration</title>
+    <style>
+        .container{
+            display: flex;
+            justify-content: space-around;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>String Iteration Example</h1>
+    <div class="container">
+        <div id="forLoop"></div>
+        <div id="whileLoop"></div>
+    </div>
+    <script>
+        const name = "Madhu Krishna";
+
+        //using for loop
+        let forLoopResult = "<h2>For Loop Output:</h2>";
+        for (let i = 0; i < name.length; i++) {
+            forLoopResult += `<p>Char at index ${i}: ${name[i]}</p>`;
+        }
+        document.getElementById('forLoop').innerHTML = forLoopResult;
+
+        // Using while loop to iterate 
+        let whileLoopResult = "<h2>While Loop Output:</h2>";
+        let index = 0;
+        while (index < name.length) {
+            whileLoopResult += `<p>Char at index ${index}: ${name[index]}</p>`;
+            index++;
+        }
+        document.getElementById('whileLoop').innerHTML = whileLoopResult;
+    </script>
+
+</body>
+
+</html>
